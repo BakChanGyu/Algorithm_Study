@@ -14,7 +14,7 @@ class Solution {
         while (n > 0) {
             long fac = factorial(n - 1);
             int quot = (int) ((k - 1) / fac);
-            k = (k - 1) % fac + 1;
+            k -= quot * fac;
             answer[index++] = list.get(quot);
             list.remove(quot);
 
